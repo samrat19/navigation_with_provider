@@ -31,7 +31,7 @@ class RootScreen extends StatelessWidget {
                 child: Container(
                   height: height / 12,
                   width: width,
-                  color: Colors.blue[900],
+                  color: Colors.black.withOpacity(0.5),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -44,7 +44,7 @@ class RootScreen extends StatelessWidget {
                           size: 40.0,
                           color: screen.currentScreen == AllScreens.screenOne
                               ? Colors.white
-                              : Colors.white70,
+                              : Colors.white30,
                         ),
                       ),
                       GestureDetector(
@@ -56,7 +56,7 @@ class RootScreen extends StatelessWidget {
                           size: 40.0,
                           color: screen.currentScreen == AllScreens.screenTwo
                               ? Colors.white
-                              : Colors.white70,
+                              : Colors.white30,
                         ),
                       ),
                       GestureDetector(
@@ -68,7 +68,7 @@ class RootScreen extends StatelessWidget {
                           size: 40.0,
                           color: screen.currentScreen == AllScreens.screenThree
                               ? Colors.white
-                              : Colors.white70,
+                              : Colors.white30,
                         ),
                       ),
                     ],
