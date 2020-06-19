@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:navigationcheck/logic/change_screen.dart';
 import 'package:navigationcheck/screen/scree_two.dart';
 import 'package:navigationcheck/screen/screen_one.dart';
+import 'package:navigationcheck/screen/screen_three.dart';
 import 'package:provider/provider.dart';
 
 class RootScreen extends StatelessWidget {
@@ -20,17 +21,17 @@ class RootScreen extends StatelessWidget {
           width: width,
           child: Stack(
             children: [
-              screen.currentScreen == Screen.screenOne
+              screen.currentScreen == AllScreens.screenOne
                   ? ScreenOne()
-                  : screen.currentScreen == Screen.screenTwo
+                  : screen.currentScreen == AllScreens.screenTwo
                       ? ScreenTwo()
-                      : Screen.screenThree,
+                      : ScreenThree(),
               Positioned(
                 bottom: 0.0,
                 child: Container(
-                  height: height / 10,
+                  height: height / 12,
                   width: width,
-                  color: Colors.blue[900].withOpacity(0.7),
+                  color: Colors.blue[900],
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -41,7 +42,7 @@ class RootScreen extends StatelessWidget {
                         child: Icon(
                           Icons.home,
                           size: 40.0,
-                          color: screen.currentScreen == Screen.screenOne
+                          color: screen.currentScreen == AllScreens.screenOne
                               ? Colors.white
                               : Colors.white70,
                         ),
@@ -53,7 +54,7 @@ class RootScreen extends StatelessWidget {
                         child: Icon(
                           Icons.account_balance,
                           size: 40.0,
-                          color: screen.currentScreen == Screen.screenTwo
+                          color: screen.currentScreen == AllScreens.screenTwo
                               ? Colors.white
                               : Colors.white70,
                         ),
@@ -65,7 +66,7 @@ class RootScreen extends StatelessWidget {
                         child: Icon(
                           Icons.account_balance_wallet,
                           size: 40.0,
-                          color: screen.currentScreen == Screen.screenThree
+                          color: screen.currentScreen == AllScreens.screenThree
                               ? Colors.white
                               : Colors.white70,
                         ),

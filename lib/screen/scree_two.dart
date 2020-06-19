@@ -8,7 +8,17 @@ class ScreenTwo extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-      color: Colors.pink,
+      color: Colors.redAccent,
+      child: Center(
+        child: Text(
+          'Second Screen',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: height / 14,
+          ),
+        ),
+      ),
     );
   }
 }

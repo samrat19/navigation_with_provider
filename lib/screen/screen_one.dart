@@ -8,7 +8,17 @@ class ScreenOne extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-      color: Colors.green,
+      color: Colors.green[900],
+      child: Center(
+        child: Text(
+          'Welcome to Provider',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: height / 14,
+          ),
+        ),
+      ),
     );
   }
 }

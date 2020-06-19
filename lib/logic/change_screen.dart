@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 
 class ChangeScreen extends ChangeNotifier {
 
-  var currentScreen = Screen.screenOne;
+  var currentScreen = AllScreens.screenOne;
 
   routeScreen(String screenName){
     if(screenName == "one"){
-      currentScreen = Screen.screenOne;
+      currentScreen = AllScreens.screenOne;
     }else if(screenName == "two"){
-      currentScreen = Screen.screenTwo;
+      currentScreen = AllScreens.screenTwo;
     }else{
-      currentScreen = Screen.screenThree;
+      currentScreen = AllScreens.screenThree;
     }
 
     notifyListeners();
   }
 }
 
-enum Screen {
+enum AllScreens {
   screenOne,
   screenTwo,
   screenThree,

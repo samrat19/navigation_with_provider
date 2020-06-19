@@ -8,7 +8,16 @@ class ScreenThree extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-      color: Colors.purpleAccent,
+      color: Colors.teal[900],
+      child: Center(
+        child: Text(
+          'Third Screen',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: height / 12,
+          ),
+        ),
+      ),
     );
   }
 }
